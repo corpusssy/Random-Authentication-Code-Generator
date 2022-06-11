@@ -30,7 +30,7 @@ function countdown() {
         if (timeleft == 0) {
             timeleft = 10;
         } 
-        document.getElementById("countdown").innerText = `${timeleft} seconds until a new code is generated`;
+        document.getElementById("countdown").innerText = `${timeleft} seconds until a new number will be generated`;
         timeleft -= 1;
     }, 1000);
 }
