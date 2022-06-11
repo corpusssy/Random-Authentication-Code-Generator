@@ -1,8 +1,16 @@
 // Store all the single digit numbers inside a variable to be used in our 6 digit verification code
 let numbers = [0, 1, 2, 3, 4, 5, 6, 7, ,8, 9];
 
-// Create and initialize a variable to store the randomly generated 6 digit number
-let generated_code = "";
+// Generate 6 random digits and store them in a variable 
+let digit1 = Math.floor(Math.random() * (numbers.length - 1));
+let digit2 = Math.floor(Math.random() * (numbers.length - 1));
+let digit3 = Math.floor(Math.random() * (numbers.length - 1));
+let digit4 = Math.floor(Math.random() * (numbers.length - 1));
+let digit5 = Math.floor(Math.random() * (numbers.length - 1));
+let digit6 = Math.floor(Math.random() * (numbers.length - 1));
+
+// Concatenate all 6 randomly generated digits into a single 6 digit number
+generated_code = `${digit1}${digit2}${digit3}${digit4}${digit5}${digit6}`;
 
 // Create a function that randomly generates a 6 digit number
 function random_code() {
@@ -30,7 +38,7 @@ function countdown() {
         if (timeleft == 0) {
             timeleft = 10;
         } 
-        document.getElementById("countdown").innerText = `${timeleft} seconds until a new number will be generated`;
+        document.getElementById("countdown").innerText = `${timeleft} seconds until a new code is generated`;
         timeleft -= 1;
     }, 1000);
 }
