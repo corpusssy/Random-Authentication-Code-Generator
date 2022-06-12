@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"></link>
-    <title>2FA CLone</title>
+    <title>2FA Clone</title>
 </head>
+
 <body>
 
-    <!-- Display randomly generated 6 digit code here -->
+    <!-- Display randomly generated 6 digit 2FA code here -->
     <h2 id="authenticator_code"></h2>
 
-    <!-- Enter randomly generated 6 digit code here -->
+    <!-- Allow the user to manually type in their randomly generated 6 digit code here -->
     <form>
-        <input type="text" id="authenticator_form">
+        <input type="text" id="authenticator_form" placeholder="Enter your 2FA code here">
     </form>
+
+    <br>
 
     <!-- Verfiy code -->
     <button id="authenticator_button" onclick="authenticate()">Authenticate</button>
@@ -23,10 +27,12 @@
     <!-- Display a countdown for when the next code will be generated -->
     <h5 id="countdown"></h5>
     
+    <!-- Credits -->
     <footer> 
         <h6>2FA by Corpusssy</h6>
     </footer>
     
 <script src="script.js"></script>    
+
 </body>
 </html>
