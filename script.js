@@ -35,7 +35,7 @@ function random_code() {
 
 // Display a countdown that displays how much time is left until a new generated 6 digit number is randomly generated 
 let timeleft = 9;
-let timertest = setInterval(function(){
+let timer = setInterval(function(){
     if (timeleft == 0) {
         timeleft = 10;
     }
@@ -60,5 +60,5 @@ function authenticate() {
 }
 
 // Call the functions 
-let new_code = setInterval(random_code, 10000);
-let timer = setInterval(countdown, 9000);
+let new_digit = setInterval(random_code, 10000);
+
