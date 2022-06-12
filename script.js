@@ -12,6 +12,17 @@ let digit6 = Math.floor(Math.random() * (numbers.length - 1));
 // Concatenate all 6 randomly generated digits into a single 6 digit number
 generated_code = `${digit1}${digit2}${digit3}${digit4}${digit5}${digit6}`;
 
+// Display the first random generated 6 digit number once the user opens the 2FA
+document.getElementById("authenticator_code").innerText = generated_code;
+
+// Display the first countdown until a new generated 6 digit number is randomly generated 
+let timeleft = 9;
+let timertest = setInterval(function(){
+    document.getElementById("countdown").innerText = `${timeleft} seconds until a new code is generated`;
+    timeleft -= 1;
+}, 1000);
+
+
 // Create a function that randomly generates a 6 digit number
 function random_code() {
 
