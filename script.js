@@ -55,10 +55,6 @@ function authenticate() {
     if (user_input == generated_code) {
         alert("You now have access");
         access_redirect();
-    
-    } else if (user_input == "sorry") {
-        access_secret();
-
     } else {
         alert("Access denied");
     }
@@ -67,11 +63,6 @@ function authenticate() {
 // Redirect the user if their input matched their 2FA number
 function access_redirect() {
     window.open("https://www.youtube.com/watch?v=F0d1BcbPyCA", "_blank");
-}
-
-// Secret message
-function access_secret() {
-    window.open("sorry.html", "_blank");
 }
 
 // Call the necessary functions 
