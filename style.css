@@ -4,3 +4,13 @@ body {
     color: white;
     background-color: rgb(87, 87, 87);
 }
+
+#context {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+#authenticator_code {
+    font-size: x-large;
+}
